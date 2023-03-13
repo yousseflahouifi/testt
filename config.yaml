@@ -1,4 +1,5 @@
 inputs:   # List of input values for the particular workflow nodes.
+  string-input-1: trickest.io
   amass-1.domain: trickest.io
   subfinder-1.domain: trickest.io
 machines: # Machines configuration by type related to execution parallelisam.
