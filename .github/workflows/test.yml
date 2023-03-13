@@ -1,0 +1,28 @@
+name: Test
+
+on:
+  push:
+
+jobs:         
+  trickest-execute-workflow:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Check Out
+      uses: actions/checkout@main
+
+    - name: Trickest Execute
+      id: trickest
+      uses: trickest/action@main
+      env:
+        TRICKEST_TOKEN: "${{ secrets.TT_TOKEN }}"
+      with:
+        workflow: "Simple Visual Recon"
+        space: "CI-CD"
+        create_structure: true
+        project: "v1.0"
+        watch: true
+        output_dir: reports
+        #output_all: true
+        output: "zip-to-out"
+        config: config.yaml
