@@ -25,4 +25,4 @@ jobs:
         output_dir: reports
         #output_all: true
         output: "zip-to-out"
-        config: config.yaml
+        config_path: config.yaml
